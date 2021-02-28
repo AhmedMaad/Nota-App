@@ -71,23 +71,22 @@ public class MainActivity extends ParentActivity {
     }
 
     private void swipeToDelete() {
-        ItemTouchHelper.SimpleCallback callback =
-                new ItemTouchHelper.SimpleCallback(0
-                        , ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
-                    @Override
-                    public boolean onMove(@NonNull RecyclerView recyclerView
-                            , @NonNull RecyclerView.ViewHolder viewHolder
-                            , @NonNull RecyclerView.ViewHolder target) {
-                        return false;
-                    }
+        ItemTouchHelper.SimpleCallback callback = new ItemTouchHelper.SimpleCallback(0
+                , ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView
+                    , @NonNull RecyclerView.ViewHolder viewHolder
+                    , @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
 
-                    @Override
-                    public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder
-                            , int direction) {
-                        int position = viewHolder.getAdapterPosition();
-                        showDeleteDialog(position);
-                    }
-                };
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder
+                    , int direction) {
+                int position = viewHolder.getAdapterPosition();
+                showDeleteDialog(position);
+            }
+        };
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
         touchHelper.attachToRecyclerView(recyclerView);
     }
@@ -131,9 +130,10 @@ public class MainActivity extends ParentActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.item_settings){
+        if (item.getItemId() == R.id.item_settings) {
             Intent i = new Intent(this, SettingsActivity.class);
             startActivity(i);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

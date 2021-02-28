@@ -1,6 +1,5 @@
 package com.maad.notaapp;
 
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -21,14 +20,11 @@ public class ParentActivity extends AppCompatActivity {
         changeLanguage(code);
     }
 
-
     public void changeLanguage(String code) {
         Locale locale = new Locale(code);
-        Locale.setDefault(locale);
         Resources resources = getResources();
         Configuration config = resources.getConfiguration();
         config.setLocale(locale);
-        //updateConfiguration is deprecated
         resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 

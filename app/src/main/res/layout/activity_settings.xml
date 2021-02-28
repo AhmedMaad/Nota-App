@@ -10,8 +10,7 @@
     <RadioGroup
         android:id="@+id/rg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checkedButton="@id/rb_english">
+        android:layout_height="wrap_content">
 
         <RadioButton
             android:id="@+id/rb_english"
