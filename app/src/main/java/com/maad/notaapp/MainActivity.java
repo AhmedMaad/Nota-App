@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             view.setVisibility(View.VISIBLE);
         else {
             view.setVisibility(View.INVISIBLE);
-            adapter = new NoteAdapter(notes);
+            adapter = new NoteAdapter(this, notes);
             recyclerView = findViewById(R.id.recycler_view);
             recyclerView.setAdapter(adapter);
             swipeToDelete();
