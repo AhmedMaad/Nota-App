@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Nota App</string>
+    <string name="no_notes_available">لا توجد ملحوظات</string>
+    <string name="add_note">إضافة ملحوظة</string>
+    <string name="enter_note_title">ادخل عنوان الملحوظة</string>
+    <string name="all_notes">كل الملحوظات</string>
+    <string name="enter_note_description">ادخل تفاصيل الملحوظة</string>
+    <string name="save_note">حفظ الملحوظة</string>
+    <string name="required_field">حقل مطلوب</string>
+    <string name="note_saved">تم حفظ الملحوظة بنجاح</string>
+    <string name="delete_dialog_title">هل أنت متأكد أنك تريد حذف هذه الملحوظة؟</string>
+    <string name="delete_dialog_message">لا يمكن التراجع عن هذا الإجراء</string>
+    <string name="delete_dialog_positive">حسنا</string>
+    <string name="delete_dialog_negative">إلغاء</string>
+    <string name="note_deleted">تم مسح الملحوظة بنجاح</string>
+    <string name="note_updated">تم تعديل الملحوظة بنجاح</string>
+    <string name="update_note">تعديل الملحوظة</string>
+    <string name="update">تعديل</string>
+    <string name="settings">الإعدادات</string>
+    <string name="arabic" translatable="false">العربية</string>
+    <string name="english" translatable="false">English (default)</string>
+    <string name="close_app">سوف يتم غلق التطبيق حتى تتغير اللغة</string>
+    <string name="language_dialog_positive">متابعة</string>
+</resources>

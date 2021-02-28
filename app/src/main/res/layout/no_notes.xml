@@ -9,7 +9,6 @@
         android:id="@+id/image"
         android:layout_width="240dp"
         android:layout_height="240dp"
-        android:contentDescription="@string/empty_paper"
         android:focusable="true"
         android:src="@drawable/note" />
 

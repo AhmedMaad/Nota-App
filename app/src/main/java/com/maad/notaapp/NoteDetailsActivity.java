@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class AddNoteActivity extends AppCompatActivity {
+public class NoteDetailsActivity extends ParentActivity {
 
     private EditText titleET;
     private EditText descET;
@@ -25,19 +25,21 @@ public class AddNoteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_note);
+        setContentView(R.layout.activity_note_details);
 
         titleET = findViewById(R.id.et_title);
         descET = findViewById(R.id.et_description);
 
         receivedId = getIntent().getIntExtra("id", -1);
         if (receivedId != -1) {
+            setTitle(R.string.update_note);
             titleET.setText(getIntent().getStringExtra("title"));
             descET.setText(getIntent().getStringExtra("desc"));
             Button updateBtn = findViewById(R.id.btn_update);
             updateBtn.setVisibility(View.VISIBLE);
             openedAsUpdate = true;
-        }
+        }else
+            setTitle(R.string.add_note);
 
     }
 

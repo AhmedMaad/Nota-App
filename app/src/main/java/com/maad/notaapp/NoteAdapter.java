@@ -2,7 +2,6 @@ package com.maad.notaapp;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
         holder.titleTV.setText(notes.get(position).getTitle());
         holder.descTV.setText(notes.get(position).getDescription());
         holder.cardView.setOnClickListener(v -> {
-            Intent i = new Intent(activity, AddNoteActivity.class);
+            Intent i = new Intent(activity, NoteDetailsActivity.class);
             i.putExtra("id", notes.get(position).getId());
             i.putExtra("title", notes.get(position).getTitle());
             i.putExtra("desc", notes.get(position).getDescription());

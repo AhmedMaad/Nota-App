@@ -10,13 +10,15 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ParentActivity {
 
     private RecyclerView recyclerView;
     private NoteAdapter adapter;
@@ -26,10 +28,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.all_notes);
     }
 
     public void openAddNoteActivity(View view) {
-        Intent i = new Intent(this, AddNoteActivity.class);
+        Intent i = new Intent(this, NoteDetailsActivity.class);
         startActivity(i);
     }
 
@@ -119,4 +122,19 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.note_deleted, Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.settings_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.item_settings){
+            Intent i = new Intent(this, SettingsActivity.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
