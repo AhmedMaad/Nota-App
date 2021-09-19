@@ -4,6 +4,8 @@ Android application that uses Recycler View, Card View, Explicit Intent, Overflo
 
 ![Nota App](https://user-images.githubusercontent.com/35191573/133918429-bb5b1bc0-fc5d-4deb-b65d-ea76c4e17a2a.gif)
 
+<img src="https://user-images.githubusercontent.com/35191573/133918429-bb5b1bc0-fc5d-4deb-b65d-ea76c4e17a2a.gif" width="220" height="400"/>
+
 ### This project is from my *Android Practicing in Arabic* tutorial on YouTube
 
 - Introduction: https://youtu.be/sw4rIHWpIh0
