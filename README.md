@@ -1,6 +1,6 @@
 # Nota-App
 ### (for my brilliant students)
-Android application that uses Recycler View, Card View, Explicit Intent, Overflow Menu, Alert Dialog, supports translation, & uses Shared Preferences with Android Studio and XML.
+Notes Android application that uses SQLite database, Recycler View, Card View, Explicit Intent, Overflow Menu, Alert Dialog, supports translation, & uses Shared Preferences with Android Studio and XML.
 
 <img src="https://user-images.githubusercontent.com/35191573/133918429-bb5b1bc0-fc5d-4deb-b65d-ea76c4e17a2a.gif" width="220" height="400"/>
 
